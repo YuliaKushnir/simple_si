@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap');
 
-*{
+*{ /*Універсальний селектор (*) виділяє всі елементи HTML на сторінці.*/
     font-family: 'Montserrat', sans-serif;
+
     margin:0; padding:0;
     box-sizing: border-box; /*Властивість дозволяє нам включати відступи та рамки в загальну ширину та висоту елемента.box-sizing*/
     /*outline-style: double;  визначає стиль контуру: лінія, яка малюється навколо елементів, ПОЗА межами, щоб елемент виділявся*/
     border-style: none; /*дозволяють вказати стиль, ширину і колір кордону елемента */
     text-decoration:none;
-    transition: all .2s linear; /*-переходи дозволяють змінювати значення властивостей плавно, протягом заданого проміжку часу */
+    transition: all .2s ease; /*-переходи дозволяють змінювати значення властивостей плавно, протягом заданого проміжку часу --- ease - типове значення, linear, ease-in, ease-out*/
 }
 
 html{
     font-size:11px;
+
     overflow-wrap: normal; /* значення за замовчуванням*/
     overflow-x:auto; /* з'являється гор. смуга прокр за потреби*/
     scroll-behavior: smooth;
@@ -20,7 +22,7 @@ html{
     /*  ::-webkit-scrollbar-thumb — маніпулятор прокрутки, який можна перетягувати.
         ::-webkit-scrollbar-track — доріжка (індикатор поступу) смуги прокрутки, де поверх білої смуги є сіра смуга.*/
     &::-webkit-scrollbar{
-        width:1rem;
+        width:1.2rem;
     }
 
     &::-webkit-scrollbar-track{
@@ -33,7 +35,7 @@ html{
 }
 
 body{
-    padding-left:15%;
+    padding-left:16%;
 }
 
 section {
@@ -41,16 +43,16 @@ section {
 }
 
 .header{
-    /* display:flex; */
+    display:flex; 
     flex-wrap:wrap;
     display:block;
     position:fixed;
     top:0; left:0; 
-    /* z-index: 2; Властивість z-index визначає порядок стека елемента. number(1000) - елемент буде найпершим*/
+
     background:	#b3ffc6;
-    width:20rem;
+    width:220px;
     height:100%;
-    padding: 3rem;
+    padding: 2.5rem;
     text-transform: capitalize; /*, uppercase, lowercase - властивість CSS, яка визначає, як писати текст елемента з великої літери. */
     
     .logo{
@@ -63,7 +65,7 @@ section {
             color: #00331a;
             font-size: 1.3rem;
             text-transform:lowercase;
-            &:hover{
+            &:hover{ /* селектор */
                 font-weight: 600;
             }
         }
@@ -94,11 +96,11 @@ section {
     display: flex;
     align-items: center;
     flex-wrap:wrap;
-    width: 100% - 20rem;
+    width: 100%;
     gap:2rem;
 
     .image{
-        flex:1 1 40 rem;
+        /* flex:1 1 40 rem; */
 
         img{
             width:60%;
@@ -125,7 +127,7 @@ section {
         padding:1.2rem;
 
         strong{
-            font-size: 20px;
+            font-size: 2rem;
             color: #004d13;
         }
 
@@ -142,8 +144,8 @@ section {
             text-align: center;
             text-decoration: underline;
             display: inline-block;
-            font-size: 16px;
-            margin:4px, 2px;
+            font-size: 1.8rem;
+            /* margin: 2rem, 3rem; */
             cursor:pointer;
             &:hover{
                 transform:scale(1.2) translateX(8px);
@@ -157,8 +159,8 @@ section {
 
     .chapters{
         p{
-            font-size: 1.9rem;
-            margin: 2.5rem;
+            font-size: 1.4rem;
+            margin: 1.5rem;
         }
     }
 
@@ -166,33 +168,33 @@ section {
         width:80%;
         h3{
             color:#004d13;
-            font-size: 2.8rem;
-            padding: 2.5rem;
+            font-size: 2.4rem;
+            padding: 2rem;
         }
         
         h4{
             color:#00331a;
-            font-size: 2.2rem;
+            font-size: 2rem;
             padding: 1.8rem;
         }
 
         .list1{
-            font-size: 2rem;
+            font-size: 1.7rem;
             padding-left: 8rem;
         }
         .list2{
-            font-size: 2rem;
+            font-size: 1.7rem;
             padding-left: 8rem;
         }
 
         span{
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-style: italic;
             padding:1.2rem;
         }
 
         p{
-            font-size: 2rem;
+            font-size: 1.6rem;
             padding:1.2rem;
         }
 
@@ -202,7 +204,7 @@ section {
                 border-style:ridge;
                 padding:2px;
                 text-align:center;
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
         }
         .table2{
@@ -211,7 +213,7 @@ section {
             width: 80%;
             padding:2px;
             text-align:center;
-            font-size: 2rem;
+            font-size: 1.5rem;
             background-color: #ffffe6;
             
             td:nth-child(even){
@@ -238,7 +240,7 @@ section {
     p{
         text-align:center;
         color:#009926;
-        font-size:1.2rem;    
+        font-size:1.1rem;    
         span{
             color:#004d13;
         }
@@ -267,7 +269,7 @@ section {
 
         .chapters{
             p{
-               font-size: 13px;
+               font-size: 1.2rem;
                margin: 2.5rem;
             }
         }
@@ -276,22 +278,22 @@ section {
             width:100%;
         h3, h4{
             color:#004d13;
-            font-size: 17px;
+            font-size: 1.5rem;
             margin:0;
         }
 
         .list1{
-            font-size: 16px;
-            margin:5px;
+            font-size: 1.6rem;
+            margin:0.5rem;
         }
         .list2{
-            font-size: 16px;
-            margin:5px;
+            font-size: 1.6rem;
+            margin:0.7rem;
         }
 
         span{
             font-style: italic;
-            font-size: 15px;
+            font-size: 1.3rem;
             margin:1px;
         }
 
@@ -307,7 +309,7 @@ section {
                 border-style:ridge;
                 padding:2px;
                 text-align:center;
-                font-size: 13px;
+                font-size: 1.3rem;
             }
         }
         .table2{
@@ -332,10 +334,10 @@ section {
                 background-color:#C0C0C0;
                 border: 1px solid black;
                 border-collapse: collapse;
-                font-size: 13px;
+                font-size: 1.3rem;
             }
             td{
-                font-size: 13px;
+                font-size: 1.3rem;
             }
         }
 
