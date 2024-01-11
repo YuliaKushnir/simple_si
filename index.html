@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Граматика англійської мови</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+    <script src="js/script.js" defer></script> <!-- Cкрипт може запитувати інф, розташ нижче. Зазвичай, це неможливо, оскільки скрипт виконується до того, як існуватиме абзац-->
+</head>
+<body>
+    <header class="header">
+        <!-- href="#" Не вказує ім'я ідентифікатора, але має відповідне розташування – верхню частину сторінки. Клацання на прив'язці пересуне позицію прокрутки вгору.href="#" -->
+        <!-- Font Awesome Solid. Це один зі стилів іконок, які надає Font Awesome. Інші стилі включають Font Awesome Regular, Font Awesome Light, Font Awesome Duotone та Font Awesome Brands -->
+        <a href="#" class="logo"><i class="fas fa-graduation-cap"></i>Граматика англійської мови<br><span>на початок сторінки</span></a>
+
+        <nav class="navbar">
+            <a href="index.html"> <i class="fas fa-angle-right"></i>  home </a>
+            <a href="adjectives.html"> <i class="fas fa-angle-right"></i> adjectives</a>
+            <a href="adverbs.html"> <i class="fas fa-angle-right"></i>  adverbs </a>
+            <a href="nouns.html"> <i class="fas fa-angle-right"></i>  nouns </a>
+            <!-- <a href="#prepositions"> <i class="fas fa-angle-right"></i>  prepositions </a>
+            <a href="#pronouns"> <i class="fas fa-angle-right"></i>  pronouns </a>
+            <a href="#punctuation"> <i class="fas fa-angle-right"></i>  punctuation </a>
+            <a href="#difference"> <i class="fas fa-angle-right"></i>  difference </a> -->
+
+        </nav>
+    </header>
+
+    <section class="home", id="home">
+        <div class="image">
+            <img src="img/engl.png" alt="people sit on enormous books">
+        </div>
+        
+        <div class="content">
+            <h3>Огляд граматичних правил і лексики</h3>
+            <p>Це швидкий, базовий граматичний огляд іменників, дієслів та особливостей використання слів</p>
+            <p>Цей довідник можна використовувати для домашніх робіт, оглядів граматичних класів або просто для тих, хто заплутався або цікавиться основами граматики англійської мови.</p>
+        </div>
+        
+        <div class="tutoring">
+            <p><strong>Послуги репетитора онлайн </strong><br><br>
+                <span id="more">
+                Наша суперздібність - навчити та знайти підхід до кожного. З нами ви зможете розібратись в усіх важливих аспектах англійської мови: грамматика, лексика, аудіювання та розмова для будь-яких цілей. Ну що ж, давайте знайомитись? 
+                </span></p>
+            <button id="btnReadMore" onclick="readMore()">Дізнатись більше</button>
+        </div>
+    </section>
+
+    <section id="footer">
+            <p>&copy; created by <span>Yuliia Kushnir</span>, 2023</p>
+    </section>
+    
+</body>
+</html>

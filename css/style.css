@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box; /*Властивість дозволяє нам включати відступи та рамки в загальну ширину та висоту елемента.box-sizing*/
+    /*outline-style: double;  визначає стиль контуру: лінія, яка малюється навколо елементів, ПОЗА межами, щоб елемент виділявся*/
+    border-style: none; /*дозволяють вказати стиль, ширину і колір кордону елемента */
+    text-decoration:none;
+    transition: all .2s linear; /*-переходи дозволяють змінювати значення властивостей плавно, протягом заданого проміжку часу */
+}
+
+html{
+    font-size:11px;
+    overflow-wrap: normal; /* значення за замовчуванням*/
+    overflow-x:auto; /* з'являється гор. смуга прокр за потреби*/
+    scroll-behavior: smooth;
+
+    /* псевдоедлементи діють так, ніби ви додали абсолютно новий елемент HTML до розмітки замість того, щоб застосувати клас до існуючих елементів.*/
+    /*  ::-webkit-scrollbar-thumb — маніпулятор прокрутки, який можна перетягувати.
+        ::-webkit-scrollbar-track — доріжка (індикатор поступу) смуги прокрутки, де поверх білої смуги є сіра смуга.*/
+    &::-webkit-scrollbar{
+        width:1rem;
+    }
+
+    &::-webkit-scrollbar-track{
+        background:transparent;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background:	#b3ffc6;
+    }
+}
+
+body{
+    padding-left:15%;
+}
+
+section {
+    padding:3rem 10rem;
+}
+
+.header{
+    /* display:flex; */
+    flex-wrap:wrap;
+    display:block;
+    position:fixed;
+    top:0; left:0; 
+    /* z-index: 2; Властивість z-index визначає порядок стека елемента. number(1000) - елемент буде найпершим*/
+    background:	#b3ffc6;
+    width:20rem;
+    height:100%;
+    padding: 3rem;
+    text-transform: capitalize; /*, uppercase, lowercase - властивість CSS, яка визначає, як писати текст елемента з великої літери. */
+    
+    .logo{
+        font-size: 2.5rem;
+        color:#009926;
+        i{
+            color:#004d13;
+        }
+        span{
+            color: #00331a;
+            font-size: 1.3rem;
+            text-transform:lowercase;
+            &:hover{
+                font-weight: 600;
+            }
+        }
+    }
+
+    .navbar{
+        /*padding:3rem, 0;*/
+
+        a{
+            display:block; /*Відображає елемент як блоковий елемент, починається з нової лінії і займає всю ширину */
+            font-size: 2rem;
+            margin:1.5rem 0;
+            color:#009926;
+
+            i{
+                color:#004d13;
+                padding-right: .5 rem;
+            }
+
+            &:hover{
+                font-weight: 550;
+            }
+        }
+    }
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    flex-wrap:wrap;
+    width: 100% - 20rem;
+    gap:2rem;
+
+    .image{
+        flex:1 1 40 rem;
+
+        img{
+            width:60%;
+            align-items: center;
+        }
+    }
+
+    .content{
+        width:90%;
+
+        h3{
+            color:#004d13;
+            font-size: 2.8rem;
+            padding: 2.5rem;
+        }
+        p{
+            font-size: 2rem;
+            padding:1.2rem;
+        }
+    }
+
+    .tutoring{
+        font-size: 2rem;
+        padding:1.2rem;
+
+        strong{
+            font-size: 20px;
+            color: #004d13;
+        }
+
+        #more{
+            display:none;
+        
+        }
+
+        #btnReadMore{
+            border: none;
+            color: #00331a;
+            background-color: #b3ffc6;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: underline;
+            display: inline-block;
+            font-size: 16px;
+            margin:4px, 2px;
+            cursor:pointer;
+            &:hover{
+                transform:scale(1.2) translateX(8px);
+            } 
+        }
+    }
+}
+
+.adjectives, .adverbs, .nouns {
+    align-items: center;
+
+    .chapters{
+        p{
+            font-size: 1.9rem;
+            margin: 2.5rem;
+        }
+    }
+
+    .content{
+        width:80%;
+        h3{
+            color:#004d13;
+            font-size: 2.8rem;
+            padding: 2.5rem;
+        }
+        
+        h4{
+            color:#00331a;
+            font-size: 2.2rem;
+            padding: 1.8rem;
+        }
+
+        .list1{
+            font-size: 2rem;
+            padding-left: 8rem;
+        }
+        .list2{
+            font-size: 2rem;
+            padding-left: 8rem;
+        }
+
+        span{
+            font-size: 2rem;
+            font-style: italic;
+            padding:1.2rem;
+        }
+
+        p{
+            font-size: 2rem;
+            padding:1.2rem;
+        }
+
+        .table1{
+            th, td {
+                border: 1px solid black;
+                border-style:ridge;
+                padding:2px;
+                text-align:center;
+                font-size: 2rem;
+            }
+        }
+        .table2{
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 80%;
+            padding:2px;
+            text-align:center;
+            font-size: 2rem;
+            background-color: #ffffe6;
+            
+            td:nth-child(even){
+                background-color: 	#f2ffe5;
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            tr{
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            th{
+                background-color:#C0C0C0;
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+        }
+
+    }
+}
+
+#footer{
+    background: #e6ffe6;
+    p{
+        text-align:center;
+        color:#009926;
+        font-size:1.2rem;    
+        span{
+            color:#004d13;
+        }
+    }
+}
+
+@media screen and (max-width:600px) {
+    body{
+        padding-left:0;
+    }
+
+    .header{
+        display:contents;
+        position:fixed;
+        top:0; left:0; 
+        background:	#b3ffc6;
+        width:90%;
+        height:30px;
+    }
+    
+    .home, .adjectives, .adverbs, .nouns{
+        width: 100%;
+        padding: 10px;
+
+        align-items: center;
+
+        .chapters{
+            p{
+               font-size: 13px;
+               margin: 2.5rem;
+            }
+        }
+        
+        .content{
+            width:100%;
+        h3, h4{
+            color:#004d13;
+            font-size: 17px;
+            margin:0;
+        }
+
+        .list1{
+            font-size: 16px;
+            margin:5px;
+        }
+        .list2{
+            font-size: 16px;
+            margin:5px;
+        }
+
+        span{
+            font-style: italic;
+            font-size: 15px;
+            margin:1px;
+        }
+
+        p{
+            font-size: 16px;
+            margin:1px;
+        }
+
+        .table1{
+            width: 100%;
+            th, td {
+                border: 1px solid black;
+                border-style:ridge;
+                padding:2px;
+                text-align:center;
+                font-size: 13px;
+            }
+        }
+        .table2{
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 100%;
+            padding:2px;
+            text-align:center;
+            font-size: 2rem;
+            background-color: #ffffe6;
+            
+            td:nth-child(even){
+                background-color: 	#f2ffe5;
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            tr{
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            th{
+                background-color:#C0C0C0;
+                border: 1px solid black;
+                border-collapse: collapse;
+                font-size: 13px;
+            }
+            td{
+                font-size: 13px;
+            }
+        }
+
+        }
+
+    }
+    
+}
+
+
